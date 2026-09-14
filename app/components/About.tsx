@@ -32,17 +32,13 @@ export default function About() {
             </h2>
 
             <p className="mt-6 text-gray-400 leading-relaxed text-lg">
-              I'm Sheikh Injamamul Haque, a passionate Full Stack
-              Developer focused on creating modern web applications,
-              AI-powered solutions, and scalable products.
-            </p>
+              I'm Sheikh Injamamul Haque, a Full Stack Developer from West Bengal, India.
 
-            <p className="mt-4 text-gray-400 leading-relaxed">
-              Currently exploring Java, Spring Boot, Next.js,
-              Agentic AI, and modern cloud technologies while
-              building real-world projects.
-            </p>
+I specialize in building modern web applications using Java, Spring Boot, React, Next.js, MongoDB, and MySQL. I enjoy creating practical solutions that solve real-world problems and continuously explore AI technologies to build innovative products.
 
+My goal is to contribute to impactful projects, collaborate with talented teams, and grow as a software engineer while delivering high-quality digital experiences.
+            </p>
+            
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
                 <h3 className="text-lime-400 text-3xl font-bold">

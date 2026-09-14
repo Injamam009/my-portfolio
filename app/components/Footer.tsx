@@ -17,7 +17,7 @@ export default function Footer() {
         {/* Social Icons */}
         <div className="flex justify-center items-center gap-6 mb-8">
           <a
-            href="https://instagram.com/YOUR_USERNAME"
+            href="https://instagram.com/iam__injamam__"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -35,7 +35,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/Injamam009"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -53,7 +53,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/YOUR_USERNAME"
+            href="https://linkedin.com/in/sk-injamamul-haque-2a1170252"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -71,7 +71,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/9635221805"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -91,11 +91,11 @@ export default function Footer() {
 
         {/* Navigation */}
         <div className="flex flex-wrap justify-center gap-8 text-gray-400 mb-8">
-          <a href="#home" className="hover:text-lime-400 transition">
+          <a href="#home" className="hover:text-blue-400 transition">
             Home
           </a>
 
-          <a href="#about" className="hover:text-lime-400 transition">
+          <a href="#about" className="hover:text-orange-400 transition">
             About
           </a>
 
@@ -103,17 +103,17 @@ export default function Footer() {
             Skills
           </a>
 
-          <a href="#projects" className="hover:text-lime-400 transition">
+          <a href="#projects" className="hover:text-red-400 transition">
             Projects
           </a>
 
-          <a href="#contact" className="hover:text-lime-400 transition">
+          <a href="#contact" className="hover:text-blue-400 transition">
             Contact
           </a>
         </div>
 
         {/* Name */}
-        <h3 className="text-2xl font-bold text-lime-400 mb-2">
+        <h3 className="text-2xl font-bold text-gray-400 mb-2">
           Sheikh Injamamul Haque
         </h3>
 

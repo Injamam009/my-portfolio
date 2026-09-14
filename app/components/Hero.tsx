@@ -60,9 +60,7 @@ export default function Hero() {
             </div>
 
             <p className="mt-8 text-gray-400 text-lg max-w-lg leading-relaxed">
-              I build modern web applications,
-              AI-powered solutions and startup-focused
-              products that solve real-world problems.
+              Full Stack Developer passionate about building scalable web applications, AI-powered tools, and impactful digital products using Java, Spring Boot, React, Next.js, and modern cloud technologies.
             </p>
 
             {/* Buttons */}

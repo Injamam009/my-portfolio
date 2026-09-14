@@ -40,18 +40,18 @@ export default function Projects() {
       className="relative py-24 text-white overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-400/10 blur-[180px] rounded-full" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-400/10 blur-[180px] rounded-full" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-lime-400 font-medium mb-3">
+         <p className="text-red-400 font-medium text-2xl md:text-4xl mb-3">
             My Work
           </p>
 
           <h2 className="text-5xl font-black">
             Featured
-            <span className="text-lime-400">
+            <span className="text-green-500">
               {" "}Projects
             </span>
           </h2>
@@ -73,7 +73,7 @@ export default function Projects() {
                 border border-white/10
                 rounded-3xl
                 p-7
-                hover:border-lime-400/40
+                hover:border-red-400/40
                 hover:shadow-[0_0_30px_rgba(163,230,53,0.15)]
                 transition-all
                 duration-300
@@ -113,8 +113,8 @@ export default function Projects() {
                       px-3
                       py-1
                       rounded-full
-                      bg-lime-400/10
-                      text-lime-400
+                      bg-pink-400/10
+                      text-red-400
                       text-sm
                     "
                   >
@@ -132,7 +132,7 @@ export default function Projects() {
                   className="
                     px-5
                     py-3
-                    bg-lime-400
+                    bg-green-400
                     text-black
                     rounded-xl
                     font-semibold
