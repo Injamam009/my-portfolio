@@ -7,6 +7,7 @@ import Journey from "./components/Journey";
 import Certificates from "./components/Certificates";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ChatBot from "./components/ChatBot";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         <Projects />
         <Contact />
         <Footer />
+        <ChatBot />
       </main>
     </div>
   );

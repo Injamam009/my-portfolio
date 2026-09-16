@@ -1,28 +1,32 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Journey() {
-  const journey = [
+  const timeline = [
+    {
+      year: "2022",
+      title: "Started B.Tech in IT",
+      description:
+        "Started my journey in Information Technology and explored programming fundamentals.",
+    },
     {
       year: "2023",
-      title: "Started Programming",
+      title: "Web Development",
       description:
-        "Began learning Java, programming fundamentals, and problem-solving.",
+        "Learned HTML, CSS, JavaScript and built my first responsive websites.",
     },
     {
       year: "2024",
       title: "Full Stack Development",
       description:
-        "Learned React, Next.js, Node.js, MongoDB and started building real-world projects.",
+        "Worked with React, Next.js, Node.js and MongoDB to build complete applications.",
     },
     {
       year: "2025",
-      title: "AI & Startup Projects",
+      title: "AI & Modern Technologies",
       description:
-        "Started developing AI-powered applications and startup-focused products.",
-    },
-    {
-      year: "Present",
-      title: "Building Professional Portfolio",
-      description:
-        "Creating scalable web applications, AI systems and expanding technical expertise.",
+        "Exploring Agentic AI, Generative AI and scalable software engineering practices.",
     },
   ];
 
@@ -32,88 +36,105 @@ export default function Journey() {
       className="relative py-24 text-white overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-400/10 blur-[180px] rounded-full" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-lime-400/10 blur-[180px] rounded-full" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
           <p className="text-lime-400 font-medium mb-3">
-            My Growth
+            My Journey
           </p>
 
           <h2 className="text-5xl font-black">
-            My
+            Career
             <span className="text-lime-400">
-              {" "}Journey
+              {" "}Timeline
             </span>
           </h2>
 
           <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-            A timeline of my learning path, development journey,
-            and growth as a software developer.
+            My learning and development journey over the years.
           </p>
-        </div>
+        </motion.div>
 
+        {/* Timeline */}
         <div className="relative">
           {/* Center Line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-lime-400/20 -translate-x-1/2"></div>
+          <div className="absolute left-1/2 top-0 h-full w-[3px] bg-lime-400/30 -translate-x-1/2 hidden md:block" />
 
-          <div className="space-y-16">
-            {journey.map((item, index) => (
-              <div
-                key={item.year}
-                className={`flex items-center ${
+          {timeline.map((item, index) => (
+            <motion.div
+              key={item.year}
+              initial={{
+                opacity: 0,
+                x: index % 2 === 0 ? -80 : 80,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+              }}
+              className={`
+                relative flex items-center mb-16
+                ${
                   index % 2 === 0
-                    ? "justify-start"
-                    : "justify-end"
-                }`}
+                    ? "md:justify-start"
+                    : "md:justify-end"
+                }
+              `}
+            >
+              {/* Dot */}
+              <div
+                className="
+                  hidden md:block
+                  absolute left-1/2
+                  -translate-x-1/2
+                  w-5 h-5
+                  bg-lime-400
+                  rounded-full
+                  shadow-[0_0_25px_rgba(163,230,53,0.9)]
+                "
+              />
+
+              {/* Card */}
+              <div
+                className="
+                  w-full md:w-[45%]
+                  bg-white/5
+                  backdrop-blur-xl
+                  border border-white/10
+                  rounded-3xl
+                  p-6
+                  hover:border-lime-400/40
+                  hover:shadow-[0_0_40px_rgba(163,230,53,0.15)]
+                  transition-all
+                  duration-500
+                "
               >
-                <div className="w-full md:w-[45%]">
-                  <div
-                    className="
-                      bg-white/5
-                      backdrop-blur-xl
-                      border
-                      border-white/10
-                      rounded-3xl
-                      p-6
-                      hover:border-lime-400/40
-                      hover:shadow-[0_0_30px_rgba(163,230,53,0.15)]
-                      transition-all
-                    "
-                  >
-                    <span className="text-lime-400 font-bold">
-                      {item.year}
-                    </span>
+                <span className="text-lime-400 font-bold text-lg">
+                  {item.year}
+                </span>
 
-                    <h3 className="text-2xl font-bold mt-2 mb-3">
-                      {item.title}
-                    </h3>
+                <h3 className="text-2xl font-bold mt-2 mb-3">
+                  {item.title}
+                </h3>
 
-                    <p className="text-gray-400">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Timeline Dot */}
-                <div
-                  className="
-                    absolute
-                    left-1/2
-                    w-5
-                    h-5
-                    bg-lime-400
-                    rounded-full
-                    -translate-x-1/2
-                    shadow-[0_0_20px_rgba(163,230,53,0.8)]
-                  "
-                  style={{
-                    top: `${index * 180 + 40}px`,
-                  }}
-                />
+                <p className="text-gray-400">
+                  {item.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
